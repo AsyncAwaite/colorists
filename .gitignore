@@ -8,6 +8,8 @@
 
 # production
 /build
+/dist
+/Figma
 
 # misc
 .DS_Store
