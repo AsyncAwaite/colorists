@@ -1,0 +1,10 @@
+.menu {
+  margin: 0;
+  padding: 0;
+  margin-left: 6.5rem;
+  &__item {
+    margin: 0 2.5rem;
+    list-style: none;
+    text-align: center;
+  }
+}

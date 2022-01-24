@@ -1,0 +1,77 @@
+@mixin before-circle {
+  content: '';
+  width: 43.5rem;
+  height: 43.5rem;
+  background: center center / cover no-repeat url(../img/circle.png);
+  background: linear-gradient(
+    139.13deg,
+    #ac1168 13.77%,
+    #590093 49.33%,
+    #00ffff 83.44%
+  );
+  background-color: red;
+  opacity: 0.25;
+  -webkit-filter: blur(120px);
+  -moz-filter: blur(120px);
+  -o-filter: blur(120px);
+  -ms-filter: blur(120px);
+  filter: blur(120px);
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -o-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+
+  z-index: 1;
+  position: absolute;
+
+}
+@mixin line {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(180deg, #590093 0%, #e01b4c 100%);
+
+}
+
+@mixin bd-gradient {
+  background-image: radial-gradient(
+        circle at 100% 100%,
+        transparent 6px,
+        #590093 6px,
+        #590093 8px,
+        transparent 8px
+      ),
+      linear-gradient(to right, #590093, #590093),
+      radial-gradient(
+        circle at 0% 100%,
+        transparent 6px,
+        #590093 6px,
+        #590093 8px,
+        transparent 8px
+      ),
+      linear-gradient(to bottom, #590093, #e01b4c),
+      radial-gradient(
+        circle at 0% 0%,
+        transparent 6px,
+        #e01b4c 6px,
+        #e01b4c 8px,
+        transparent 8px
+      ),
+      linear-gradient(to left, #e01b4c, #e01b4c),
+      radial-gradient(
+        circle at 100% 0%,
+        transparent 6px,
+        #e01b4c 6px,
+        #e01b4c 8px,
+        transparent 8px
+      ),
+      linear-gradient(to top, #e01b4c, #590093);
+    background-size: 8px 8px, calc(100% - 16px) 2px, 8px 8px,
+      2px calc(100% - 16px);
+    background-position: top left, top center, top right, center right,
+      bottom right, bottom center, bottom left, center left;
+    background-repeat: no-repeat;
+}
+

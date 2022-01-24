@@ -1,0 +1,18 @@
+.section {
+  padding: 5rem 0;
+  &__main-screen {
+    padding: 13rem 0 1rem;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+  }
+  &__for-who  {
+    .blur-circle {
+      bottom: -10rem;
+      right: -10rem;
+    }
+  }
+  &__courses {
+    
+  }
+}

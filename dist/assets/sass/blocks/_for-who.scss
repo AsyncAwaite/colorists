@@ -1,0 +1,56 @@
+.for-who {
+  display: grid;
+  grid-template-areas:
+    "title title title"
+    "item-1 item-2 btn";
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 5rem;
+  h2 {
+    grid-area: title;
+  }
+  &__item {
+    .img {
+      padding-bottom: 51%;
+      margin-bottom: 2.5rem;
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+      }
+    }
+    h3 {
+      margin-bottom: 1.5rem;
+      padding-right: 10rem;
+    }
+    .text {
+      margin-bottom: 1.5rem;
+      padding-right: 10rem;
+    }
+  }
+  &__item:nth-child(2) {
+    grid-area: item-1;
+  }
+  &__item:nth-child(3) {
+    position: relative;
+    grid-area: item-2;
+    .img {
+      border-radius: 0 10rem 0 0;
+      overflow: hidden;
+    }
+    .course-name {
+top: 10rem;
+right: -10rem;
+z-index: -1;
+
+    }
+  }
+  button {
+    grid-area: btn;
+    justify-self: center;
+    align-self: center;
+  }
+}

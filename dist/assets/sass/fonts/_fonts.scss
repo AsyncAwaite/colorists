@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'Arimo';
+  src: url('../fonts/Arimo/Arimo-Bold.woff2') format('woff2'),
+      url('../fonts/Arimo/Arimo-Bold.woff') format('woff'),
+      url('../fonts/Arimo/Arimo-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arimo';
+  src: url('../fonts/Arimo/Arimo-Regular.woff2') format('woff2'),
+      url('../fonts/Arimo/Arimo-Regular.woff') format('woff'),
+      url('../fonts/Arimo/Arimo-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant';
+  src: url('../fonts/Cormorant/Cormorant-Bold.woff2') format('woff2'),
+      url('../fonts/Cormorant/Cormorant-Bold.woff') format('woff'),
+      url('../fonts/Cormorant/Cormorant-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
+      url('../fonts/Roboto/Roboto-Regular.woff') format('woff'),
+      url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
