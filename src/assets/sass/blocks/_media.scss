@@ -10,9 +10,13 @@
     font-size: 4.8rem;
     line-height: 5.8rem;
   }
+  .fz-24 {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+  }
   .fz-18 {
-   font-size: 1.8rem;
-    line-height: 2.1rem; 
+    font-size: 1.8rem;
+    line-height: 2.1rem;
   }
   .main-screen {
     &__promo {
@@ -22,38 +26,50 @@
       }
     }
   }
+  .blur-circle {
+    &-m {
+      width: 34rem;
+      height: 34rem;
+    }
+    &-s {
+      width: 25rem;
+      height: 25rem;
+    }
+  }
+  .title {
+    margin-bottom: 5.5rem;
+  }
 }
 
 @media (max-width: 1200px) {
-  h1 {
-    color: red;
-  }
   .menu {
     margin-left: 4.5rem;
   }
   .for-who {
     &__item {
-      h3, .text {
+      h3,
+      .text {
         padding-right: 8rem;
       }
-
     }
     &__item:nth-child(3) {
       .course-name {
-       width: 17rem;
-       height: 17rem;
+        width: 17rem;
+        height: 17rem;
 
-       top: 8.5rem;
-       right: -8.5rem;
+        top: 8.5rem;
+        right: -8.5rem;
       }
+    }
+  }
+  .footer {
+    .menu {
+      margin-left: 0;
     }
   }
 }
 
 @media (max-width: 992px) {
-  h1 {
-    color: green;
-  }
   .header {
     justify-content: space-between;
     .menu {
@@ -76,23 +92,23 @@
   }
   .for-who {
     grid-template-areas:
-    "title title"
-    "item-1 item-2"
-    "btn btn ";
+      "title title"
+      "item-1 item-2"
+      "btn btn ";
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
     .title {
       margin-bottom: 0;
     }
     &__item {
-      h3, .text {
+      h3,
+      .text {
         padding-right: 4rem;
       }
-
     }
     &__item:nth-child(3) {
       .course-name {
-display: none;
+        display: none;
       }
     }
     .btn {
@@ -102,12 +118,64 @@ display: none;
       }
     }
   }
+  .experts {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 30rem);
+    gap: 2rem;
+    &__item:nth-child(1),
+    &__item:nth-child(3) {
+      background-position-y: top;
+    }
+    &__item:nth-child(2) {
+      grid-row: 1 / 3;
+    }
+  }
+  .section {
+    &__contacts {
+      padding: 7rem 0;
+    }
+  }
+  .contacts {
+    h2 {
+      font-size: 28px;
+      line-height: 38px;
+    }
+  }
+  .form {
+    &-wrapper {
+      grid-template-columns: repeat(2, 25rem) 1fr;
+      grid-template-rows: 50px 1fr;
+      row-gap: 20px;
+    }
+    h3 {
+      width: 50%;
+      font-size: 16px;
+      line-height: 18px;
+    }
+    &__input {
+      padding: 1.5rem;
+      font-size: 16px;
+      line-height: 18px;
+    }
+    .btn {
+      width: 9rem;
+      height: 9rem;
+      position: relative;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  .footer {
+    .menu {
+      column-gap: 5rem;
+    }
+    .logo {
+      align-self: center;
+    }
+  }
 }
 
 @media (max-width: 768px) {
-  h1 {
-    color: rgb(68, 0, 255);
-  }
   .header {
     padding: 1rem 0;
     height: 8.5rem;
@@ -215,15 +283,78 @@ display: none;
   }
   .for-who {
     &__item {
-      h3, .text {
+      h3,
+      .text {
         padding-right: 0rem;
       }
-
     }
     .btn {
       .course-name {
         width: 12rem;
         height: 12rem;
+      }
+    }
+  }
+  .course {
+    padding: 1.7rem;
+    &-wrapper {
+      grid-template-rows: repeat(2, 25rem);
+    }
+  }
+  .benefits {
+    &__item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    &__icon {
+      margin-right: 0;
+      margin-bottom: 1rem;
+      svg {
+        position: relative;
+        top: 0;
+      }
+    }
+  }
+  .contacts {
+    h2 {
+      font-size: 22px;
+      line-height: 28px;
+    }
+    .course-name {
+      width: 17rem;
+      height: 17rem;
+      top: -15rem;
+    }
+  }
+  .form {
+    &-wrapper {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      justify-items: center;
+      justify-content: center;
+      h3 {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        width: 100%;
+        align-self: center;
+      }
+    }
+    .btn {
+      grid-row: 1 / 2;
+      grid-column: 2 / 3;
+      justify-self: center;
+      align-self: center;
+    }
+  }
+  .footer {
+    &-wrapper {
+      flex-wrap: wrap;
+      row-gap: 3rem;
+    }
+    .menu {
+      &__item {
+        padding: 0.5rem 0;
       }
     }
   }
@@ -234,12 +365,13 @@ display: none;
     height: 8rem;
   }
   .section {
+    padding: 2rem 0;
     &__main-screen {
       padding-top: 8rem;
     }
-  }
-  h1 {
-    color: rgb(0, 225, 255);
+    &__contacts {
+      padding: 5rem 0;
+    }
   }
   .social-link {
     &_header {
@@ -281,17 +413,125 @@ display: none;
   }
   .for-who {
     grid-template-areas:
-    "title "
-    "item-1"
-    "item-2"
-    "btn";
+      "title "
+      "item-1"
+      "item-2"
+      "btn";
     grid-template-columns: 1fr;
     gap: 1.5rem;
-}
+  }
+  .course {
+    &-wrapper {
+      grid-template-areas:
+        "basic"
+        "blond"
+        "blond"
+        "from-black"
+        "all-course"
+        "all-course";
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 15rem);
+    }
+  }
+  .experts {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 30rem) 15rem 30rem;
+    gap: 2rem;
+    &__item:nth-child(2) {
+      padding: 2rem 0;
+      grid-row: 2 / 4;
+    }
+  }
+  .reviews {
+    &__nav {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    &__item {
+      img {
+        border-radius: 0 10rem;
+      }
+      p {
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+      }
+    }
+  }
+  .benefits {
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    gap: 1.5rem;
+    &__item:nth-child(2) {
+      grid-row: 2 / 3;
+      grid-column: 1/ 2;
+    }
+    &__item:nth-child(3) {
+      grid-row: 1 / 3;
+      grid-column: 2 / 3;
+      justify-content: center;
+      height: 100%;
+    }
+  }
+  .contacts {
+    h2 {
+      margin-bottom: 7rem;
+      span {
+        right: 0;
+      }
+    }
+    .course-name {
+      display: none;
+    }
+  }
+  .form {
+    &-wrapper {
+      grid-template-columns: 1fr;
+      grid-template-rows: 4rem repeat(3, 1fr);
+      gap: 1rem;
+      justify-items: stretch;
+      h3 {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        margin-bottom: 4rem;
+      }
+    }
+    .btn {
+      grid-column: 1 / 2;
+      grid-row: 4 / 5;
+    }
+    &__block {
+      label {
+        width: 100%;
+      }
+    }
+    &__input {
+      width: 100%;
+    }
+  }
+  .footer {
+    &-wrapper{
+      display: grid;
+      justify-content: center;
+      justify-items: center;
+    }
+    .menu {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      justify-content: center;
+      
+    }
+    &__contacts{
+      align-items: center;
+    }
+  }
 }
 
 @media (max-width: 320px) {
-  h1 {
-    color: rgb(229, 255, 0);
+  .main-screen{
+    &__promo{
+      .promo-text{
+        padding-right: 10rem;
+      }
+    }
   }
 }

@@ -1,0 +1,28 @@
+.benefits{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+  padding: 5rem 0;
+  &__item{
+    align-items: flex-end;
+
+   
+  }
+  &__icon {
+    min-width: 8.5rem;
+    width: 8.5rem;
+    height: 8.5rem;
+    margin-right: .5rem;
+    position: relative;
+    svg{
+      position: absolute;
+      top: -2rem;
+    }
+  }
+  &__text{
+    height: 5rem;
+  }
+  .blur-circle {
+    top: -5rem;
+  }
+}

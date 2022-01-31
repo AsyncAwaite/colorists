@@ -1,0 +1,23 @@
+[
+  {
+    "img": "assets/img/reviews/gallery-1.jpeg",
+    "title": "Наталия Чукичева",
+    "review": "В целом, конечно, сплочённость команды профессионалов обеспечивает широкому кругу (специалистов) участие в формировании форм воздействия."
+  }, 
+  {
+    "img": "assets/img/reviews/gallery-2.jpeg",
+    "title": "Анастасия Богатырева",
+    "review": "В целом, конечно, сплочённость команды профессионалов обеспечивает широкому кругу (специалистов) участие в формировании форм воздействия."
+  }, 
+  {
+    "img": "assets/img/reviews/gallery-3.jpeg",
+    "title": "Анна Чивикова",
+    "review": "Банальные, но неопровержимые выводы, а также активно развивающиеся страны третьего мира лишь добавляют фракционных разногласий и функционально разнесены на независимые элементы."
+  },
+  {
+    "img": "assets/img/reviews/gallery-2.jpeg",
+    "title": "Анна Test",
+    "review": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ad quas sit quidem nam laudantium quam. Dignissimos, vel ut, explicabo rerum porro exercitationem, nesciunt suscipit consequuntur ipsum voluptate unde cum!"
+  }
+
+]

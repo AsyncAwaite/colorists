@@ -1,0 +1,56 @@
+.reviews {
+overflow: hidden;   
+padding: 0 1rem;
+max-width: size(1200, 300);
+margin: 0 auto;
+
+
+  &__nav {
+    top: 11rem;
+    left: 0;right: 0;
+    margin-left: -3rem;
+    margin-right: -3rem;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    svg {
+        width: 3rem;
+    }
+  }
+  &__item {
+
+    .img {
+      padding-bottom: 70%;
+      margin-bottom: 2.5rem;
+      border-radius: 0;
+      transition:  border-radius .5s ease-in;
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        transition:  border-radius .5s ease-in;
+      }
+    }
+    h3 {
+      margin-bottom: 1.5rem;
+    }
+    p {
+      margin-bottom: 1.5rem;
+    }
+    &.swiper-slide-active {
+      .img{
+        border-radius: 0 10rem;
+        overflow: hidden;
+        transition:  border-radius .5s ease-in;
+
+      }
+
+    }
+  }
+  
+}

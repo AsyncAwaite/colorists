@@ -1,0 +1,17 @@
+.contacts{
+
+  position: relative;
+  z-index: 10;
+  h2 {
+    font-family: Cormorant;
+    margin-bottom: 50px;
+    span {
+      font-family: inherit;
+      top: 100%;
+    }
+  }
+  .course-name{
+    top: -17rem;
+    right: 0;
+  }
+}

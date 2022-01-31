@@ -1,0 +1,32 @@
+.experts {
+  display: grid;
+  column-gap: 4rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 53rem;
+
+  &__item:nth-child(1) {
+    border-radius: 0 10rem;
+    background: center center/cover url(../img/photo-expert1.jpg);
+  }
+  &__item:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    h3 {
+      margin-bottom: 3rem;
+    }
+    p {
+      margin-bottom: 2.5rem;
+    }
+    div {
+      margin: auto auto 3rem;
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__item:nth-child(3) {
+    background: center center/cover url(../img/photo-expert2.jpg);
+  }
+}

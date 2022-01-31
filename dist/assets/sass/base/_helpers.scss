@@ -36,28 +36,14 @@
 .fz-18 {
   font-size: size(18, 14);
   line-height: size(21, 16);
-
 }
 .fz-24 {
-  font-size: 2.4rem;
-  line-height: 2.8rem;
-  @media (max-width: 768px) {
-    font-size: 1.8rem;
-    line-height: 2.1rem;
-  }
-  @media (max-width: 576px) {
-    font-size: 1.4rem;
-    line-height: 1.4rem;
-  }
-  @media (max-width: 380px) {
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-  }
+  font-size: size(24, 16);
+  line-height: size(28, 18);
 }
 .fz-48 {
   font-size: size(48, 30);
   line-height: size(58, 30);
-
 }
 .fz-150 {
   font-size: size(140, 30);
@@ -140,7 +126,7 @@
   position: absolute;
 }
 .pos-r {
-  position: relative;
+  position: relative!important;
 }
 
 .blur-card {
@@ -150,6 +136,11 @@
   -moz-backdrop-filter: blur(35px);
   -o-backdrop-filter: blur(35px);
   -ms-backdrop-filter: blur(35px);
+  transform: translate3d(0, 0, 0) rotate(-15deg);
+  -webkit-transform: translate3d(0, 0, 0) rotate(-15deg);
+  -moz-transform: translate3d(0, 0, 0) rotate(-15deg);
+  -o-transform: translate3d(0, 0, 0) rotate(-15deg);
+  -ms-transform: translate3d(0, 0, 0) rotate(-15deg);
   transition: all 0.6 linear;
 }
 .course-name {
@@ -161,12 +152,7 @@
 .blur-circle {
   position: absolute;
   border-radius: 50%;
-  transform: rotate(-15deg);
-  filter: blur(40px);
-  -webkit-filter: blur(40px);
-  -moz-filter: blur(40px);
-  -o-filter: blur(40px);
-  -ms-filter: blur(40px);
+  z-index: -1;
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
@@ -175,6 +161,29 @@
   &-m {
     width: size(343, 100);
     height: size(343, 100);
+    filter: blur(120px);
+    -webkit-filter: blur(120px);
+    -moz-filter: blur(120px);
+    -o-filter: blur(120px);
+    -ms-filter: blur(120px);
+  }
+  &-s {
+    width: size(250, 80);
+    height: size(250, 80);
+    filter: blur(50px);
+    -webkit-filter: blur(50px);
+    -moz-filter: blur(50px);
+    -o-filter: blur(50px);
+    -ms-filter: blur(50px);
+  }
+  &-l {
+    width: size(460, 120);
+    height: size(460, 120);
+    filter: blur(140px);
+    -webkit-filter: blur(140px);
+    -moz-filter: blur(140px);
+    -o-filter: blur(140px);
+    -ms-filter: blur(140px);
   }
   &-yellow {
     background: rgba(185, 152, 89, 0.2);

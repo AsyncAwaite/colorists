@@ -6,13 +6,33 @@
     min-height: 100vh;
     display: flex;
   }
-  &__for-who  {
+  &__for-who {
     .blur-circle {
       bottom: -10rem;
       right: -10rem;
     }
   }
-  &__courses {
+  &__contacts {
+    padding: 10rem 0;
+    position: relative;
+    &::after,
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    &::before {
+      background: center center/cover url(../img/contacts-bg.jpg);
+      filter: blur(4px) brightness(44%) contrast(113%);
+      -webkit-filter: blur(4px) brightness(44%) contrast(113%);
+      -moz-filter: blur(4px) brightness(44%) contrast(113%);
     
+    }
+    &::after {
+      background: rgba(185, 152, 89, 0.2);
+    }
   }
 }

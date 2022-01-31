@@ -1,0 +1,36 @@
+.footer {
+  padding: 90px 0;
+  &-wrapper {
+    justify-content: space-between;
+    display: flex;
+  }
+  .logo {
+    max-width: 165px;
+    width: size(165, 100);
+    height: size(100, 55);
+    max-height: 100px;
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 100px;
+    &__item {
+      margin: 0;
+    }
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    h3,
+    .link {
+      margin-bottom: 15px;
+    }
+    div {
+      .link {
+        margin-right: 15px;
+      }
+    }
+  }
+}

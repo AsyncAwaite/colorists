@@ -9,7 +9,7 @@ const imagemin = require("gulp-imagemin");
 const htmlmin = require("gulp-htmlmin");
 const webpack = require("webpack-stream");
 const dist = "./dist/";
-// const dist = "C:/MAMP/htdocs/test";
+// const dist = "C:/MAMP/htdocs/colorists";
 
 gulp.task("server", function () {
   browserSync({

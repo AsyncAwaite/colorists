@@ -1,0 +1,52 @@
+.form {
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 18px;
+  line-height: 21px;
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 280px) 1fr;
+    grid-template-rows: 70px 1fr;
+   gap: 30px;
+    h3 {
+      font-family: Arimo;
+      
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 21px;
+      width: 30%;
+      grid-column: 1 / 4;
+      grid-row: 1 / 2;
+    }
+  }
+
+  &__block {
+    padding-bottom: 30px;
+    span {
+      font-size: 14px;
+      line-height: 16px;
+      display: block;
+      margin-left: 25px;
+      margin-bottom: 8px;
+    }
+  }
+  &__input {
+    font-size: 18px;
+    line-height: 20px;
+
+    color: #ffffff;
+
+    border: 1px solid #ffffff;
+    background: transparent;
+    border-radius: 30px;
+    padding: 22px 25px;
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+  .btn {
+    bottom: 0;
+    right: 0;
+    justify-self: end;
+  }
+}

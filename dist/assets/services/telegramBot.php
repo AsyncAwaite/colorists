@@ -1,35 +1,28 @@
 <?php
-$token = "2126668624:AAFayoUGaavmyCNYq7uveCj8vIGSMtM-nv8";
+$token = "5154649149:AAHcEqhr2fpjsxrkUj1h4fCSYg20hhM0rh4";
 
-// $chat_id = "-504167134";
-$chat_id = "-1001727429144";
+
+$chat_id = "-1001774453449";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (!empty($_POST['wbe-name']) && !empty($_POST['wbe-tel'])) {
-    if (isset($_POST['wbe-name'])) {
-      if (!empty($_POST['wbe-name'])) {
-        $name = strip_tags($_POST['wbe-name']);
-        $nameFieldset = "Ім'я: ";
+  if (!empty($_POST['name']) && !empty($_POST['wbe-tel'])) {
+    if (isset($_POST['name'])) {
+      if (!empty($_POST['name'])) {
+        $name = strip_tags($_POST['name']);
+        $nameFieldset = "Имя: ";
       }
     }
 
-    if (isset($_POST['wbe-tel'])) {
+    if (isset($_POST['tel'])) {
       if (!empty($_POST['phone'])) {
-        $phone = strip_tags($_POST['wbe-tel']);
+        $phone = strip_tags($_POST['tel']);
         $phoneFieldset = "Телефон: ";
       }
     }
-    if (isset($_POST['"wbe-email'])) {
-      if (!empty($_POST['"wbe-email'])) {
-        $email = strip_tags($_POST['"wbe-email']);
-        $emailFieldset = "email: ";
-      }
-    }
-
+ 
     $arr = array(
       $nameFieldset => $name,
-      $phoneFieldset => $phone,
-      $emailFieldset => $email
+      $phoneFieldset => $phone
     );
     foreach ($arr as $key => $value) {
       $txt .= "<b>" . $key . "</b> " . $value . "%0A";

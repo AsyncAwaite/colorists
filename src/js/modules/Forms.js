@@ -4,7 +4,7 @@ export default class Form {
     this.forms = document.querySelectorAll(forms);
     this.inputs = document.querySelectorAll("input");
     this.message = {
-      loading: "Загрузка...",
+      loading: "assets/icons/spinner.svg",
       success: "Спасибо! Скоро мы с вами свяжемся!",
       failure: "Что-то пошло не так...",
     };
@@ -12,9 +12,7 @@ export default class Form {
     this.req = {
       phone: false,
       name: false,
-      email: false,
-      oferta: false,
-      policy: false
+  
     };
   }
 
@@ -24,9 +22,8 @@ export default class Form {
       item.classList.remove("valid");
       this.req.phone = false;
       this.req.name = false;
-      this.req.oferta = false;
-      this.req.policy = false;
-      this.req.email = false;
+
+    
       // item.nextElementSibling.textContent = "";
     });
   }
@@ -41,14 +38,11 @@ export default class Form {
   checkInputs() {
     let inputs = document.querySelectorAll(".form__input");
     inputs.forEach((input) => {
-      if (input.name === "wbe-name") {
+      if (input.name === "name") {
         this.checkNameInput(input);
-      } else if (input.name === "wbe-email") {
-        this.checkEmailInput(input);
-      } else if ( input.name === "wbe-tel" && !input.classList.contains('ru')) {
+      } else if ( input.name === "tel") {
         this.checkPhoneInput(input);
       } 
-      
       else {
         return;
       }
@@ -91,46 +85,16 @@ export default class Form {
     });
   }
 
-  checkEmailInput(input) {
-    input.addEventListener("input", () => {
-      let reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-      if (reg.test(input.value) == true) {
-        input.classList.add("valid");
-        input.classList.remove("invalid");
-        this.req.email = true;
-      } else {
-        input.classList.add("invalid");
-        input.classList.remove("valid");
-      }
-    });
-  }
 
   disabledBtn () {
 
     this.forms.forEach((form) => {
-      const chekBox = form.querySelectorAll(".form__checkbox");
+   
   
 
 
       const submitBtn = form.querySelector(".btn__form");
-      chekBox.forEach((item) => {
-     console.log(item)
-        item.addEventListener("click", function () {
-          if (this.classList.contains("active")) {
-            console.log(this)
-            this.classList.remove("active");
-            // this.classList.add("this");
-            submitBtn.classList.add("disabled");
-            return;
-          } else {
-            console.log(1)
-            submitBtn.classList.remove("disabled");
-            this.classList.add("active");
-            // this.classList.remove("this");
-            return;
-          }
-        });
-      });
+    
     });
   }
 
@@ -146,7 +110,62 @@ export default class Form {
     // this.checkPhoneInputs();
     this.checkInputs();
     // this.disabledBtn();
-    
+    this.forms.forEach((item) => {
+      item.addEventListener("submit", (e) => {
+
+        e.preventDefault();
+        let loadMessage = document.createElement('img');
+        loadMessage.src =  this.message.loading;
+        loadMessage.style.cssText = `
+            display: block;
+            margin: 0 auto;
+        `;
+        messageBox.insertAdjacentElement('afterbegin', loadMessage); 
+        if (this.req.phone && this.req.name) {
+   
+          const formData = new FormData(item);
+          this.postData(this.path, formData)
+            .then((res) => {
+         
+              messageBox.innerHTML = "";
+              closeModal(".modal");
+              setTimeout(() => {
+        
+                openModal(".modal", "data-thank");
+              }, 1000);
+             
+            })
+            .catch(() => {
+              messageBox.textContent = this.message.failure;
+            })
+            .finally(() => {
+              this.clearInputs();
+
+              setTimeout(() => {
+                
+                closeModal(".modal");
+              }, 5000);
+            });
+        } else {
+          if (!this.req.phone && !this.req.name) {
+            messageBox.textContent = `пожалуйста заполните номер телефона и Ваше имя`;
+            setTimeout(() => {
+              messageBox.textContent = "";
+            }, 5000);
+          } else if (!this.req.name) {
+            messageBox.textContent = `введите Ваше имя`;
+            setTimeout(() => {
+              messageBox.textContent = "";
+            }, 5000);
+          } else {
+            messageBox.textContent = `пожалуйста заполните номер телефона`;
+            setTimeout(() => {
+              messageBox.textContent = "";
+            }, 5000);
+          }
+        }
+      });
+    });
 
   }
 }
