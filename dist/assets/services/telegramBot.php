@@ -1,5 +1,5 @@
 <?php
-$token = "5154649149:AAHcEqhr2fpjsxrkUj1h4fCSYg20hhM0rh4";
+
 
 
 $chat_id = "-1001774453449";
